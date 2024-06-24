@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Followeds</h1>
+
+<div id="followeds">
+  <% @followeds.each do |followed| %>
+    <%= render followed %>
+    <p>
+      <%= link_to "Show this followed", followed %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New followed", new_followed_path %>

@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @post %>
+
+<div>
+  <% if current_user.id == @post.author_id %>
+    <%= link_to "Edit this post", edit_post_path(@post) %>
+  <% elsif not (@is_already_liked) %>
+    <%= button_to "LIKE", like_post_path(@post.id), method: :post  %>
+  <% else %>
+    <%= button_to "UNLIKE", unlike_post_path(@post.id), method: :delete  %>
+  <% end %>
+    <%= link_to "Back to posts", posts_path %>
+  <% if current_user == @post.author_id %>
+    <%= button_to "Destroy this post", @post, method: :delete %>
+  <% end %>
+</div>
+
+<div>
+  <h3>Comments</h3>
+  <%= link_to "New comment", controller: "comments", action: "new", post_id: @post.id %>
+  <%= render @post.comments %>
+</div>
