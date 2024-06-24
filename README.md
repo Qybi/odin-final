@@ -1,24 +1,6 @@
-# README
+# Odin project final exercise
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the final project of the Odin Project's Ruby on Rails Programming course.
+It is a full stack web application that resembles the behavior of a social network.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+no styling was added to this project, it is a simple exercise to practice the concepts learned in the course.
