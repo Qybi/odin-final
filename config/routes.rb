@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :followeds, only: [:create, :destroy]
   resources :followers, only: [:create, :destroy]
-  resources :comments, only: [:new, :create, :destroy]
+  resources :comments , only: [:new, :edit, :create, :destroy, :update]
 
   post "likes/:post_id" => "likes#create", as: :like_post
   delete "likes/:post_id" => "likes#destroy", as: :unlike_post
